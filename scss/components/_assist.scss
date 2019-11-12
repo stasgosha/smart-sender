@@ -1,0 +1,93 @@
+// $colors: (
+// 	white: #fff,
+// 	text: $text-color,
+// 	accent: $accent,
+// 	primary: $primary,
+// );
+
+// blue: $blue,
+// orange: $orange,
+// dark: $text-dark
+
+// @each $i in $colors{
+// 	$color-key: nth($i, 1);
+// 	$color-value: nth($i, 2);
+
+// 	&.color-#{$color-key}{
+// 		color: $color-value !important;
+// 	}
+// }
+
+.color-primary{
+	color: $primary;
+}
+
+@mixin addFocusBorder($color: $primary, $size: 8px){
+	position: relative;
+	z-index: 2;
+
+	&:focus{
+		outline: none;
+
+		&:before{
+			content: '';
+			display: block;
+			width: calc(100% + #{$size});
+			height: calc(100% + #{$size});
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+			border: 2px solid $color;
+		}
+	}
+}
+
+.push{
+	position: relative;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-right{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.object-fit-cover{
+	object-fit: cover;
+	object-position: center center;
+	font-family: 'object-fit: cover; object-position: center center;';
+}
+
+.text-center{
+	text-align: center;
+}
+
+.flex-auto{
+	flex: auto;
+}
+
+.js-aos{
+	will-change: transform;
+}
+
+.sm-visible{
+	display: none;
+}
+
+@media screen and (max-width: 767px){
+	.sm-hidden{
+		display: none;
+	}
+
+	.sm-visible{
+		display: block;
+	}
+}

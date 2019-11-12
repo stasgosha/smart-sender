@@ -1,0 +1,151 @@
+.faq-section{
+	padding: 120px 0 40px;
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-figure{
+		position: absolute;
+		left: 88.3%;
+		top: -331px;
+		display: block;
+		z-index: -1;
+	}
+
+	.section-caption{
+		margin-bottom: 60px;
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 60px;
+
+		.section-figure{
+			top: -220px;
+		}
+	}
+}
+
+.accordion{
+	width: 100%;
+	max-width: 1030px;
+	margin: 0 auto 25px;
+
+	.ac-header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 100px;
+		padding: 25px 35px;
+		border-radius: 8px;
+		box-shadow: $shadow;
+		background: #fff;
+		cursor: pointer;
+
+		.question{
+			font-weight: 500;
+			color: $primary;
+		}
+
+		.opener{
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: transparent;
+			border: 0;
+			appearance: none;
+			position: relative;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all $t;
+			flex: none;
+
+			&:after{
+				content: '';
+				display: block;
+				width: 12px;
+				height: 12px;
+				border-bottom: 3px solid $gray;
+				border-right: 3px solid $gray;
+				transform: translateY(-2px) rotate(45deg);
+				transition: all $t;
+			}
+
+			&:hover{
+				&:after{
+					border-bottom-color: $primary;
+					border-right-color: $primary;
+				}
+			}
+
+			@include addFocusBorder();
+
+			@media screen and (max-width: 767px){
+				transform: scale(.7);
+			}
+		}
+	}
+
+	.ac-content{
+		padding: 55px 35px;
+		display: none;
+
+		p{
+			font-size: 18px;
+			line-height: 1.222;
+			margin-bottom: 1.222rem;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.opened{
+		.ac-header{
+			.opener{
+				transform: rotate(-180deg);
+
+				@media screen and (max-width: 767px){
+					transform: scale(.7) rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.ac-header{
+			padding: 15px 18px;
+			border-radius: 8px;
+			min-height: 90px;
+		}
+
+		.ac-content{
+			padding: 55px 18px;
+
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.ac-header{
+			padding: 2.6042vw 3.1250vw;
+			border-radius: 1.3889vw;
+			min-height: 15.6250vw;
+			font-size: 16px;
+		}
+
+		.ac-content{
+			padding: 9.5486vw 3.1250vw;
+
+			p{
+				font-size: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.pre-footer-section{
+	padding: 145px 0;
+	position: relative;
+
+	.section-bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background: $primary;
+
+		img{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-position: right center;
+			font-family: 'object-fit: cover; object-position: right center;';
+		}
+	}
+
+	.container{
+		position: relative;
+	}
+
+	.section-content{
+		text-align: center;
+		max-width: 1000px;
+		margin: 0 auto 60px;
+		color: #fff;
+
+		p{
+			font-size: 36px;
+			line-height: 1.222;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 25.1736vw 0;
+
+		.section-content{
+			margin-bottom: 10.4167vw;
+
+			p{
+				font-size: 6.2500vw;
+			}
+		}
+	}
+}

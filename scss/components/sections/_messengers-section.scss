@@ -1,0 +1,201 @@
+.messengers-section{
+	margin-top: -30px;
+
+	.section-inner{
+		display: flex;
+		align-items: center;
+	}
+
+	.section-content{
+		padding-top: 80px;
+		width: calc(100% / 12 * 7);
+		position: relative;
+		z-index: 2;
+
+		p{
+			max-width: 550px;
+		}
+	}
+
+	.section-images{
+		position: relative;
+		width: calc(100% / 12 * 5);
+
+		.big-image{
+			position: relative;
+			z-index: 2;
+
+			img{
+				width: 881px;
+				display: block;
+				height: auto;
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				width: 895px;
+				height: 895px;
+				border: 50px solid #f2f2f2;
+				position: absolute;
+				border-radius: 50%;
+				top: 42px;
+				left: 96px;
+				z-index: -1;
+			}
+		}
+
+		.abs-icon{
+			position: absolute;
+
+			&.viber{
+				filter: blur(8px);
+				top: 352px;
+				left: -76px;
+			}
+
+			&.messenger{
+				top: 478px;
+				left: -337px;
+			}
+
+			&.telegram{
+				top: 600px;
+				left: -100px;
+			}
+
+			&.skype{
+				filter: blur(12px);
+				top: 400px;
+				left: 89px;
+				z-index: 10;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-content{
+			width: calc(100% / 12 * 5);
+
+			p{
+				max-width: 240px;
+
+				br{
+					display: none;
+				}
+			}
+		}
+
+		.section-images{
+			width: calc(100% / 12 * 7);
+
+			.abs-icon{
+				&.messenger{
+					top: 158px;
+					left: -147px;
+					width: 112px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		position: relative;
+
+		.section-content{
+			padding-top: 360px;
+			width: 340px;
+		}
+
+		.section-images{
+			position: absolute;
+			left: 160px;
+			top: 0;
+
+			.abs-icon{
+				display: none;
+			}
+
+			.big-image{
+				img{
+					width: 576px;
+				}
+
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		margin-top: -5.2083vw;
+
+		.section-content{
+			width: 59.0278vw;
+			padding-top: 62.5000vw;
+
+			p{
+				max-width: 41.6667vw;
+			}
+		}
+
+		.section-images{
+			left: 27.7778vw;
+
+			.big-image{
+				img{
+					width: 100.0000vw;
+				}
+			}
+		}
+	}
+}
+
+.messengers-list{
+	margin-top: 40px;
+	list-style: none;
+
+	li{
+		margin-bottom: 22px;
+		display: flex;
+		align-items: center;
+		color: $primary;
+		font-weight: bold;
+
+		&:before{
+			display: none;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.item-icon{
+			display: block;
+			width: 24px;
+			height: 24px;
+			fill: $primary;
+			flex: none;
+			margin-right: 39px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		margin-top: 6.9444vw;
+
+		li{
+			margin-bottom: 3.8194vw;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			.item-icon{
+				width: 4.1667vw;
+				height: 4.1667vw;
+				margin-right: 6.7708vw;
+			}
+		}
+	}
+}

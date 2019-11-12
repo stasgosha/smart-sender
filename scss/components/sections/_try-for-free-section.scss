@@ -1,0 +1,296 @@
+.try-for-free-section{
+	padding: 30px 0 80px;
+	background: #f2f2f2;
+
+	.section-inner{
+		display: flex;
+	}
+
+	.section-content{
+		padding-top: 75px;
+		width: 50%;
+		max-width: 500px;
+		margin-right: 5px;
+		margin-left: 5px;
+		flex: none;
+
+		.section-text{
+			margin-bottom: 40px;
+		}
+	}
+
+	.section-programs{
+		display: flex;
+		width: calc(100% + calc(7px * 2));
+		margin-left: -7px;
+		margin-right: -7px;
+
+		.item{
+			padding: 0 7px;
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-content{
+			max-width: 370px;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column;
+
+			.section-programs{
+				// width: 100%;
+				margin-top: 50px;
+			}
+		}
+
+		.section-content{
+			width: 100%;
+			max-width: unset;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.programs-tabs{
+		display: none;
+	}
+
+	@media screen and (max-width: 767px){
+		.section-programs{
+			display: block;
+			width: 100%;
+
+			.item{
+				width: 300px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#tab-pro{
+				display: none;
+			}
+		}
+
+		.programs-tabs{
+			display: flex;
+			border-bottom: 1px solid $gray;
+			max-width: 482px;
+			width: 100%;
+			margin: 110px auto 100px;
+		}
+
+		.tab-link{
+			background: transparent;
+			border: 0;
+			appearance: none;
+			position: relative;
+			transition: all $t;
+			text-align: center;
+			padding-bottom: 23px;
+			font-size: 36px;
+			line-height: 1.222;
+			font-weight: bold;
+			color: $text-color;
+			flex: auto;
+			margin-bottom: -1px;
+			width: 50%;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 5px;
+				background: $primary;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 0;
+				transition: all $t;
+			}
+
+			&.current{
+				color: $primary;
+
+				&:before{
+					height: 5px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 5.2083vw 0 13.8889vw;
+
+		.section-content{
+			padding-top: 13.0208vw;
+
+			.section-text{
+				margin-bottom: 6.9444vw;
+			}
+		}
+
+		.section-inner{
+			.section-programs{
+				margin-top: 8.6806vw;
+			}
+		}
+
+		.programs-tabs{
+			max-width: 83.6806vw;
+			margin: 19.0972vw auto 17.3611vw;
+		}
+
+		.tab-link{
+			padding-bottom: 3.9931vw;
+			font-size: 6.2500vw;
+		}
+	}
+}
+
+.program-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.card-header{
+		width: calc(100% - 20px);
+		margin-left: 10px;
+		margin-right: 10px;
+		border-radius: 43px 43px 0 0;
+		background: $primary;
+		color: #fff;
+		padding: 40px 34px 20px;
+		min-height: 275px;
+		flex: none;
+
+		p{
+			font-size: 18px;
+			line-height: 1.222;
+			margin-bottom: 1.222em;
+			max-width: 200px;
+		}
+
+		.price{
+			font-size: 48px;
+			line-height: 1.222;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+	}
+
+	.card-caption{
+		font-size: 36px;
+		line-height: 1.222;
+		font-weight: bold;
+		margin-bottom: 22px;
+	}
+
+	.card-content{
+		background: #fefeff;
+		padding: 45px 20px;
+		box-shadow: $shadow;
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all $t;
+
+		&.dark{
+			background: $gray;
+			color: #fff;
+
+			.features-list li .item-icon{
+				fill: #fff;
+			}
+
+			.card-opener{
+				color: #fff;
+				border-top-color: #fff;
+
+				&:after{
+					border-right-color: #fff;
+					border-bottom-color: #fff;
+				}
+			}
+		}
+	}
+
+	&:not(.opened) .card-content.with-hidden-content{
+		padding-bottom: 0;
+	}
+
+	.features-list{
+		list-style: none;
+
+		li{
+			display: flex;
+			align-items: center;
+			margin-bottom: 17px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			.item-icon{
+				width: 24px;
+				height: 24px;
+				margin-right: 25px;
+				flex: none;
+				fill: $text-color;
+			}
+
+			.item-text{
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
+
+	.card-hidden-content{
+		margin-top: 17px !important;
+		display: none;
+	}
+
+	.card-opener{
+		cursor: pointer;
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: none;
+		background: transparent;
+		border: 0;
+		border-top: 1px solid $text-color;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: bold;
+		appearance: none;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			box-sizing: border-box;
+			border-bottom: 2px solid $text-color;
+			border-right: 2px solid $text-color;
+			margin-left: 9px;
+			transform: translateY(-2px) rotate(45deg);
+			transition: all $t;
+		}
+
+		&:hover{
+			color: $primary !important;
+
+			&:after{
+				border-bottom-color: $primary !important;
+				border-right-color: $primary !important;
+			}
+		}
+	}
+}

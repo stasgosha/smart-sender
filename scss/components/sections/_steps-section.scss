@@ -1,0 +1,326 @@
+.steps-section{
+	padding: 100px 0 40px;
+
+	.step{
+		display: flex;
+		position: relative;
+		width: 100%;
+
+		.step-image{
+			img{
+				display: block;
+			}
+		}
+	}
+
+	.step-text{
+		position: relative;
+		flex: none;
+
+		.step-caption{
+			font-size: 36px;
+			line-height: 1.222;
+			color: $primary;
+			margin-bottom: 30px;
+		}
+
+		.step-arrow{
+			position: absolute;
+			display: block;
+		}
+	}
+
+	.step-1{
+		align-items: center;
+
+		.step-text{
+			max-width: 490px;
+			margin-right: 96px;
+		}
+
+		.step-arrow{
+			left: 300px;
+			top: calc(100% + 25px);
+		}
+	}
+
+	.step-2{
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.step-text{
+			max-width: 423px;
+		}
+
+		.step-image{
+			margin-top: 25px;
+			margin-left: calc(100% / 12 - 30px);
+		}
+
+		.step-arrow{
+			right: 294px;
+			top: calc(100% + 90px);
+		}
+	}
+
+	.step-3{
+		align-items: center;
+		margin-top: -300px;
+
+		.step-text{
+			max-width: 583px;
+			margin-right: 80px;
+			padding-top: 100px;
+		}
+
+		.step-image{
+			position: relative;
+			z-index: 2;
+		}
+
+		.step-arrow{
+			right: -162px;
+			top: 208px;
+		}
+	}
+
+	.step-4{
+		align-items: center;
+		justify-content: space-between;
+		margin-top: -50px;
+
+		.step-text{
+			max-width: 443px;
+			flex: none;
+			padding-top: 30px;
+		}
+
+		.step-image{
+			margin-top: 25px;
+			width: calc(100% / 12 * 6 + 30px);
+			margin-right: calc(100% / 12 + 30px);
+			direction: rtl;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		.step-arrow{
+			display: none !important;
+		}
+
+		.step-3{
+			.step-text{
+				max-width: 523px;
+				margin-right: 0;
+			}
+		}
+
+		.step-4{
+			.step-image{
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.step-1{
+			margin-bottom: 50px;
+
+			.step-text{
+				max-width: 350px;
+				margin-right: 0;
+			}
+
+			.step-image{
+				margin-left: -100px;
+			}
+		}
+
+		.step-2{
+			.step-image{
+				margin-top: 0;
+			}
+
+			.step-text{
+				max-width: 360px;
+				padding-top: 30px;
+			}
+		}
+
+		.step-3{
+			margin-top: -100px;
+			margin-bottom: 50px;
+
+			.step-text{
+				max-width: 340px;
+			}
+
+			.step-image{
+				margin-left: -100px;
+			}
+		}
+
+		.step-4{
+			.step-text{
+				max-width: 330px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.step-1{
+			flex-direction: column-reverse;
+			align-items: stretch;
+
+			.step-image{
+				height: 510px;
+				margin-left: 45px;
+				position: relative;
+				width: 100%;
+				margin-left: 0;
+
+				img{
+					position: absolute;
+					left: 45px;
+					top: 0;
+				}
+			}
+
+			.step-text{
+				margin-top: -20px;
+				width: 100%;
+				max-width: 460px;
+			}
+		}
+
+		.step-2{
+			.step-image{
+				width: 320px;
+				flex: none;
+				margin-left: -100px;
+
+				img{
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.step-text{
+				max-width: 280px;
+			}
+		}
+
+		.step-3{
+			position: relative;
+
+			.step-text{
+				width: 330px;
+				margin-bottom: 440px;
+			}
+
+			.step-image{
+				position: absolute;
+				left: 220px;
+				top: 150px;
+				margin-left: 0;
+
+				img{
+					height: 550px;
+				}
+			}
+		}
+
+		.step-4{
+			padding-bottom: 470px;
+
+			.step-text{
+				padding-left: 200px;
+				padding-top: 160px;
+				width: 100%;
+				max-width: unset;
+			}
+
+			.step-image{
+				position: absolute;
+				left: -33px;
+				width: 429px;
+				top: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.step-text{
+			.step-caption{
+				font-size: 6.2500vw;
+				margin-bottom: 5.2083vw;
+			}
+		}
+
+		.step-1{
+			.step-image{
+				height: 88.5417vw;
+				margin-left: 7.8125vw;
+
+				img{
+					left: 7.8125vw;
+					height: 88.5417vw;
+				}
+			}
+
+			.step-text{
+				margin-top: -3.4722vw;
+				max-width: 79.8611vw;
+			}
+		}
+
+		.step-2{
+			.step-image{
+				width: 55.5556vw;
+				margin-left: -17.3611vw;
+			}
+
+			.step-text{
+				max-width: 48.6111vw;
+			}
+		}
+
+		.step-3{
+			margin-top: -17.3611vw;
+			margin-bottom: 8.6806vw;
+
+			.step-text{
+				width: 57.2917vw;
+				margin-bottom: 76.3889vw;
+			}
+
+			.step-image{
+				left: 38.1944vw;
+				top: 26.0417vw;
+
+				img{
+					height: 95.4861vw;
+				}
+			}
+		}
+
+		.step-4{
+			padding-bottom: 81.5972vw;
+
+			.step-text{
+				padding-left: 34.7222vw;
+				padding-top: 27.7778vw;
+			}
+
+			.step-image{
+				left: -5.7292vw;
+				width: 74.4792vw;
+
+				img{
+					height: 164.7569vw;
+				}
+			}
+		}
+	}
+}

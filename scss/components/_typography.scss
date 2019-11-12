@@ -1,0 +1,151 @@
+// .tpg - typoraphy prefix
+
+body{
+	font-size: 24px;
+	line-height: 1.208;
+	color: $text-color;
+	font-family: $main-font;
+
+	@media screen and (max-width: 575px){
+		// font-size: 16px;
+		font-size: 4.1667vw;
+	}
+}
+
+.tpg p,
+body .tpg-body-1,
+.tpg-note{
+	font-size: 24px;
+	line-height: 1.208;
+	margin: 0 0 1.208em;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	// @media screen and (max-width: 575px){
+	// 	font-size: 16px;
+	// }
+
+	&.big{
+		font-size: 36px;
+		line-height: 1.222;
+		font-weight: bold;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 4.1667vw;
+
+		&.big{
+			font-size: 6.2500vw;
+		}
+	}
+}
+
+.tpg h1,
+.tpg-h1{
+	font-size: 72px;
+	line-height: 1.222;
+	font-weight: 800;
+	margin-bottom: 29px;
+
+	.color-primary{
+		color: $primary;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 12.5000vw;
+		margin-bottom: 5.0347vw;
+	}
+}
+
+.tpg h2,
+.tpg-h2,
+.tpg h3,
+.tpg-h3{
+	color: $primary;
+	font-size: 29px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	font-weight: 900;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 5.0347vw;
+		line-height: 5.2083vw;
+		margin-bottom: 3.4722vw;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+// sup{
+// 	vertical-align: top;
+// 	position: relative;
+// 	top: -0.5em;
+// }
+
+// .tpg ul,
+// body .tpg-ul{
+// 	list-style: none;
+// 	font-size: 18px;
+// 	line-height: 1.375;
+// 	margin-bottom: 1.375em;
+
+// 	li{
+// 		&:before{
+// 			content: '- ';
+// 		}
+// 	}
+// }
+
+.section-caption{
+	margin-bottom: 30px;
+	position: relative;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.sc-title{
+		color: $text-color;
+		font-size: 36px;
+		line-height: 1.222;
+		font-weight: 700;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&.white{
+		.sc-title{
+			color: #fff;
+		}
+	}
+
+	&.big{
+		.sc-title{
+			font-size: 48px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		margin-bottom: 5.2083vw;
+
+		.sc-title{
+			font-size: 6.2500vw;
+		}
+
+		&.big{
+			.sc-title{
+				font-size: 8.3333vw;
+			}
+		}
+	}
+}
