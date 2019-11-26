@@ -151,6 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).closest('.accordion').toggleClass('opened')
 				.find('.ac-content').stop().slideToggle(300);
 	});
+
+	// Scroll to anchor
+	$(document).on('click', 'a[href^="#"]', function (event) {
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top-60
+		}, 500);
+	});
 });
 
 function getCoords(elem) {

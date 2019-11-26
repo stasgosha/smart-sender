@@ -54,6 +54,8 @@
 		align-self: flex-end;
 		max-width: 585px;
 		margin-bottom: 220px;
+		position: relative;
+		z-index: 2;
 
 		.section-caption{
 			margin-bottom: 0;
@@ -167,6 +169,7 @@
 			left: 50%;
 			top: 100%;
 			transform: translateX(-50%);
+			transition: all $t;
 		}
 
 		span{
@@ -185,6 +188,24 @@
 			flex-direction: column;
 			line-height: 22px;
 			height: 100px;
+			align-items: center;
+			text-align: center;
+
+			&.on-1{
+				transform: translateX(-20px);
+
+				&:after{
+					left: 34px;
+				}
+			}
+
+			&.on-9{
+				transform: translateX(calc(-100% + 20px));
+
+				&:after{
+					left: calc(100% - 34px);
+				}
+			}
 		}
 
 		@media screen and (max-width: 575px){
@@ -301,5 +322,11 @@
 		.item:before{
 			height: 15px;
 		}
+	}
+
+	@media screen and (max-width: 376px){
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
